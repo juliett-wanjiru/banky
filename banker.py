@@ -15,6 +15,10 @@ class Account:
             self.balance+=amount
             self.deposits.append(self.balance)
             return f"you have deposited {amount}.Your new balnace is {self.balance}"
+    def deposits_statement(self):
+        for x in self.deposits:
+            print(f"you;ve deposited {x}")
+
 
     def withdraw(self,amount):
 
@@ -26,6 +30,11 @@ class Account:
             self.balance-=amount
             self.withdraws.append(self.balance)
             return f"you have withdrawn {amount} your blance is {self.balance}"
+
+    def withdrawals_statement(self):
+        for j in self.withdraws:
+            print (f"you have withdrawn {j}")
+
     def deposit_statements(self):
         print(*self.deposits,sep="\n")
     def withdraw_statements(self):
